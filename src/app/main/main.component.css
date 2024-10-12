@@ -1,0 +1,88 @@
+.cont_body{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+.cont_main{
+  margin: 100px 30px;
+  display: flex;
+  justify-content: center;
+  width: 80%;
+}
+.main_img{
+  position: relative;
+  border-radius: 50%;
+  margin: 15px 30px ;
+  background-color: #adbbbe;
+  min-width: 300px;
+  max-width: 300px;
+  height: 300px;
+  transition: 0.5s;
+  box-shadow: 0 0 16px var(--mainColor);
+  rotate: -4deg;
+}
+.main_img img{
+  position: absolute;
+  top: -49px;
+  left: -20px;
+  width: 350px;
+  border-radius: 300px;
+}
+h1{
+  font-size: 30px;
+}
+.sub_title{
+  font-size: 60px;
+}
+.text{
+  font-size: 20px;
+  font-family: 'Calibre', 'Inter', 'San Francisco', 'SF Pro Text', -apple-system, system-ui, sans-serif;
+}
+.name{
+  color: var(--mainColor);
+}
+.cont_btn button{
+  margin: 10px 0;
+  padding: 5px 10px;
+  background-color: var(--backgroundColor);
+  color: var(--mainColor);
+
+  box-shadow: 0 0 10px var(--mainColor);
+  border-radius: 5px;
+  font-size: 20px;
+  font-family: 'Calibre', 'Inter', 'San Francisco', 'SF Pro Text', -apple-system, system-ui, sans-serif;
+  cursor: pointer;
+  transition: 0.5s;
+}
+.cont_btn button:hover{
+  background-color: var(--mainColor);
+  color: var(--backgroundColor);
+}
+
+.cont_btn a{
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 3rem;
+  height: 3rem;
+  background: transparent;
+  border: 0.15rem solid var(--mainColor);
+  font-size: 1.5rem;
+  border-radius: 50%;
+  color: var(--mainColor);
+  margin: 10px 0.5rem;
+  transition: 0.3s ease;
+  .cont_btn a i{
+    color: var(--mainColor);
+  }
+}
+
+.cont_btn a i{
+  color: var(--mainColor);
+}
+
+.cont_btn a:hover{
+  color: var(--mainColor);
+  box-shadow: 0 0 10px var(--mainColor);
+}

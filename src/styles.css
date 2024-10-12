@@ -12,8 +12,9 @@ body{
 
 }
 :root{
-  --mainColor: rgb(255, 75, 75);
+  --mainColor: rgb(52, 194, 47);
   --backgroundColor: rgb(10, 25, 47);
   --black: rgb(0, 0, 0);
   --white: rgb(116, 215, 116);
+  --font-mono: 'SF Mono', 'Fira Code', 'Fira Mono', 'Roboto Mono', monospace;
 }

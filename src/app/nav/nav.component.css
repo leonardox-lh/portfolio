@@ -6,7 +6,7 @@
   left: 0;
   align-items: center;
   z-index: 100;
-  background:rgb(0, 0, 0, 0.8);
+  background:rgb(0, 0, 0, 0.1);
 }
 
 .space{
@@ -29,7 +29,7 @@
   justify-content: center;
   align-items: center;
   padding: 0 15px;
-  width: 65%;
+  width: 60%;
 }
 
 .navbar a{

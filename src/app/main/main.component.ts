@@ -2,13 +2,13 @@ import { Component } from '@angular/core';
 import {animate, state, style, transition, trigger} from "@angular/animations";
 
 @Component({
-  selector: 'app-nav',
-  templateUrl: './nav.component.html',
-  styleUrls: ['./nav.component.css'],
+  selector: 'app-main',
+  templateUrl: './main.component.html',
+  styleUrls: ['./main.component.css'],
   animations: [
     trigger('enterState', [
       state('void', style({
-        transform: 'translateY(-100%)',
+        transform: 'translateY(10%)',
         opacity: 0
       })),
       transition(':enter',[
@@ -18,16 +18,8 @@ import {animate, state, style, transition, trigger} from "@angular/animations";
         }))
       ]),
     ]),
-  ],
+    ],
 })
-export class NavComponent {
-  isMenuOpen: boolean;
-  constructor() {
-    this.isMenuOpen = false;
-      window.scrollTo(0, 0);
-  }
-  toggleMenu(){
-    this.isMenuOpen = !this.isMenuOpen;
-  }
+export class MainComponent {
 
 }

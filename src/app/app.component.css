@@ -1,4 +1,9 @@
-
+.content_body{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
 .lds-ripple,
 .lds-ripple div {
   box-sizing: border-box;
