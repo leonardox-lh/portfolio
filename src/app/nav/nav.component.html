@@ -1,0 +1,23 @@
+<header class="nav" @enterState>
+
+  <div class="logo">
+    <h1><span>&lt;</span>Leonard<span>/&gt;</span></h1>
+  </div>
+  <i class="fas fa-bars" id="menuList" (click)="toggleMenu()"></i>
+
+  <nav class="navbar" id="menu" [class.active]="isMenuOpen"  >
+    <a href="#">About me</a>
+    <a href="#">Tools</a>
+    <a href="#" >Projects</a>
+    <a href="#">Contact</a>
+  </nav>
+</header>
+
+<div class="space"></div>
+
+<router-outlet></router-outlet>
+
+
+
+
+
