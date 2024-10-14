@@ -1,0 +1,101 @@
+.card{
+  margin: 0 auto;
+  width: 70%;
+  background: var(--backgroundColor);
+  text-align: center;
+  border-radius: 10px;
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+}
+.card div{
+  background-color: var(--backgroundColor);
+  border-radius: 10px;
+  box-shadow: 0 0 4px var(--mainColor);
+  margin: 15px 20px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+.card div:hover{
+  background-color: var(--secondColor);
+  opacity: 1;
+}
+/*@property --angle{
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: false;
+}
+@property --angle2{
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: false;
+}
+
+.card::after{
+  content: '';
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-image: conic-gradient(from var(--angle), transparent 90%, var(--mainColor));
+  top: 50%;
+  left: 50%;
+  translate: -50% -50%;
+  z-index: -1;
+  padding: 3px;
+  border-radius: 10px;
+  animation: 10s spin linear infinite;
+}
+.card::before{
+  content: '';
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-image: conic-gradient(from var(--angle2),var(--mainColor), transparent 10% );
+  top: 50%;
+  left: 50%;
+  translate: -50% -50%;
+  z-index: -1;
+  padding: 3px;
+  border-radius: 10px;
+  animation: 10s spin2 linear infinite;
+}
+@keyframes spin{
+  from {
+    --angle: 50deg;
+  }
+  to {
+    --angle: 410deg;
+  }
+}
+
+@keyframes spin2{
+  from {
+    --angle2: 360deg;
+  }
+  to {
+    --angle2: 0deg;
+  }
+}*/
+
+i{
+  color: var(--mainColor);
+  font-size: 30px;
+  padding: 15px;
+}
+i:hover::after {
+  content: attr(title);
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  color: var(--mainColor);
+  padding: 5px 10px;
+  border-radius: 5px;
+  white-space: nowrap;
+  font-size: 14px;
+  z-index: 1;
+  margin-bottom: 5px;
+}
