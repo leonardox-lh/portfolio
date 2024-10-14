@@ -24,7 +24,6 @@ export class NavComponent {
   isMenuOpen: boolean;
   constructor() {
     this.isMenuOpen = false;
-      window.scrollTo(0, 0);
   }
   toggleMenu(){
     this.isMenuOpen = !this.isMenuOpen;

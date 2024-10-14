@@ -1,6 +1,6 @@
 .subtitle{
-  margin-top: 100px;
-  margin-bottom: 100px;
+  margin-top: 130px;
+  margin-bottom: 30px;
   text-align: center;
   font-size: 2rem;
   font-family: 'Roboto', sans-serif;
@@ -12,24 +12,24 @@
 .subtitle::before{
   content: '';
   display: block;
-  width: 35%;
-  height: 4px;
-  background-color: var(--mainColor);
-  box-shadow: 0 0 15px var(--mainColor);
+  width: 15%;
+  height: 1px;
+  background-color: var(--secondColor);
+  box-shadow: 0 0 7px var(--mainColor);
   position: absolute;
-  top: -30px;
+  top: 16px;
   right: 20%;
   border-radius: 90px 0 0 90px;
 }
 .subtitle::after{
   content: '';
   display: block;
-  width: 30%;
-  height: 4px;
-  background-color: var(--mainColor) ;
+  width: 15%;
+  height: 1px;
+  background-color: var(--secondColor);
   box-shadow: 0 0 7px var(--mainColor);
   position: absolute;
-  bottom: -30px;
+  bottom: 15px;
   left: 20%;
   border-radius: 0 90px 90px 0;
 }

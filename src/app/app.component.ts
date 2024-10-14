@@ -1,5 +1,4 @@
 import {Component, OnInit} from '@angular/core';
-
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -7,8 +6,13 @@ import {Component, OnInit} from '@angular/core';
 })
 export class AppComponent implements OnInit {
 
+  constructor() {
+
+  }
   ngOnInit(): void {
-    window.scrollTo(0, 0); // Desplazarse a la parte superior (0, 0) de la página
+   /* setTimeout(() => {
+      window.scrollTo(0, 0);
+    }, 0);*/
   }
 
 }

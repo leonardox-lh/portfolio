@@ -1,14 +1,10 @@
-.cont_body{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-}
+
 .cont_main{
   margin: 100px 30px;
   display: flex;
   justify-content: center;
-  width: 80%;
+  align-items: center;
+  width: 100%;
 }
 .main_img{
   position: relative;
@@ -21,6 +17,9 @@
   transition: 0.5s;
   box-shadow: 0 0 16px var(--mainColor);
   rotate: -4deg;
+}
+.cont_text{
+  margin: 15px 60px;
 }
 .main_img img{
   position: absolute;
@@ -41,23 +40,6 @@ h1{
 }
 .name{
   color: var(--mainColor);
-}
-.cont_btn button{
-  margin: 10px 0;
-  padding: 5px 10px;
-  background-color: var(--backgroundColor);
-  color: var(--mainColor);
-
-  box-shadow: 0 0 10px var(--mainColor);
-  border-radius: 5px;
-  font-size: 20px;
-  font-family: 'Calibre', 'Inter', 'San Francisco', 'SF Pro Text', -apple-system, system-ui, sans-serif;
-  cursor: pointer;
-  transition: 0.5s;
-}
-.cont_btn button:hover{
-  background-color: var(--mainColor);
-  color: var(--backgroundColor);
 }
 
 .cont_btn a{

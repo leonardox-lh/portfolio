@@ -9,6 +9,8 @@ import { MainComponent } from './main/main.component';
 import { IconsComponent } from './icons/icons.component';
 import { TitleComponent } from './title/title.component';
 import { ToolsComponent } from './tools/tools.component';
+import { EducationComponent } from './education/education.component';
+import { ProjectsComponent } from './projects/projects.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +19,9 @@ import { ToolsComponent } from './tools/tools.component';
     MainComponent,
     IconsComponent,
     TitleComponent,
-    ToolsComponent
+    ToolsComponent,
+    EducationComponent,
+    ProjectsComponent
   ],
   imports: [
     BrowserAnimationsModule,

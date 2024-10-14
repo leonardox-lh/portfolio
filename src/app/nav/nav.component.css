@@ -7,6 +7,8 @@
   align-items: center;
   z-index: 100;
   background:rgb(0, 0, 0, 0.1);
+  backdrop-filter: blur(8px);
+  box-shadow: 0 0 10px var(--mainColor);
 }
 
 .space{
@@ -15,7 +17,7 @@
 
 .logo{
   font-size: 23px;
-  margin: 30px 60px;
+  margin: 10px 50px;
 }
 
 #menuList{
@@ -119,7 +121,7 @@ span{
   }
   .navbar a:hover{
     color: var(--mainColor);
-    text-shadow: 1px  0px 0px var(--mainColor),;
+    text-shadow: 1px  0 0 var(--mainColor),;
   }
 
   .navbar a::before,
