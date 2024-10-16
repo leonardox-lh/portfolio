@@ -1,0 +1,15 @@
+.footer{
+    background-color: var(--mainColor);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    margin: 0;
+}
+.footer p{
+    margin: 0;
+    padding: 10px;
+  font-family: var(--font-sans);
+}
