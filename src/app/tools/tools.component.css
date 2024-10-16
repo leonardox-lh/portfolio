@@ -1,27 +1,38 @@
-.card{
-  margin: 0 auto;
-  width: 70%;
+.tools{
+  width: 100%;
   background: var(--backgroundColor);
   text-align: center;
   border-radius: 10px;
   position: relative;
   display: flex;
   flex-wrap: wrap;
-  align-items: center;
   justify-content: center;
   flex-direction: row;
 }
-.card div{
+.cont_tools{
+  width: 28%;
   background-color: var(--backgroundColor);
+  border: 1px solid var(--mainColor);
   border-radius: 10px;
-  box-shadow: 0 0 4px var(--mainColor);
   margin: 15px 20px;
-  cursor: pointer;
-  transition: 0.2s;
+  padding: 10px;
 }
-.card div:hover{
-  background-color: var(--secondColor);
-  opacity: 1;
+.title{
+  font-size: 25px;
+  color: var(--mainColor);
+  margin: 10px 0;
+}
+.description{
+  font-size: 15px;
+  color: var(--text-color);
+  margin: 10px 0;
+  font-family: var(--font-sans);
+}
+.icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
 }
 /*@property --angle{
   syntax: "<angle>";
@@ -84,6 +95,7 @@ i{
   color: var(--mainColor);
   font-size: 30px;
   padding: 15px;
+  cursor: pointer;
 }
 i:hover::after {
   content: attr(title);

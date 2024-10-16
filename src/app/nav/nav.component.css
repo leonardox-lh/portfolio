@@ -8,16 +8,20 @@
   z-index: 100;
   background:rgb(0, 0, 0, 0.1);
   backdrop-filter: blur(8px);
-  box-shadow: 0 0 10px var(--mainColor);
+  transition: top 0.3s;
+}
+.hidden {
+  top: -100px;
 }
 
-.space{
-  height: 100px;
-}
 
 .logo{
   font-size: 23px;
   margin: 10px 50px;
+}
+.logo a{
+  color: var(--text-color);
+  text-decoration: none;
 }
 
 #menuList{
@@ -32,13 +36,20 @@
   align-items: center;
   padding: 0 15px;
   width: 60%;
+
 }
 
 .navbar a{
   margin: 0 15px;
   font-size: 24px;
-  color: white;
   position: relative;
+  color: var(--text-color);
+  text-decoration: none;
+
+}
+.navbar button i{
+  color: var(--text-color);
+
 }
 span{
   color: var(--mainColor);

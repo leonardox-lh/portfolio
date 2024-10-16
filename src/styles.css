@@ -6,10 +6,16 @@
   list-style: none;
   color: white;
 }
-body{
+body.dark{
   background-color: var(--backgroundColor);
   font-family: 'Chau Philomene One', sans-serif;
-
+  --text-color: white;
+}
+body.light {
+  background-color: var(--backgroundColor);
+  --text-color: black;
+  font-family: 'Chau Philomene One', sans-serif;
+  --backgroundColor: #f1f1f1;
 }
 a{
   text-decoration: none;
@@ -33,11 +39,12 @@ button:hover{
 }
 
 :root{
-  --mainColor: rgb(52, 194, 47);
+  --mainColor: rgb(17, 154, 149);
   --secondColor: rgba(52, 192, 47, 0.51);
   --backgroundColor: rgb(10, 25, 47);
   --black: rgb(0, 0, 0);
   --white: rgb(116, 215, 116);
   --font-sans: 'Calibre', 'Inter', 'San Francisco', 'SF Pro Text', -apple-system, system-ui, sans-serif;
   --font-mono: 'SF Mono', 'Fira Code', 'Fira Mono', 'Roboto Mono', monospace;
+  --text-color: #f8f8f2;
 }

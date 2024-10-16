@@ -2,11 +2,7 @@
   width: 1000px;
   margin: 0 auto;
 }
-.lds-ripple,
-.lds-ripple div {
-  box-sizing: border-box;
-  color: red;
-}
+
 .lds-ripple {
   display: inline-block;
   position: relative;

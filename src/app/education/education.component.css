@@ -6,7 +6,7 @@
 
 .sidebar {
   width: 200px;
-  color: #fff;
+  color: var(--text-color);
   padding: 10px;
 }
 
@@ -22,6 +22,7 @@
   transition: background-color 0.3s, border-color 0.3s;
   font-family: var(--font-sans) ;
   border-left-color: var(--secondColor);
+  color: var(--text-color);
 }
 
 .sidebar li.active {
@@ -29,12 +30,11 @@
   border-left-color: var(--mainColor);
 }
 
-.details {
+.details{
   width: 700px;
   flex-grow: 1;
   padding: 20px;
   background-color: var(--backgroundColor);
-  color: #fff;
   min-height: 300px;
   font-family: var(--font-sans) ;
 }
@@ -42,8 +42,17 @@
 .details h3 {
   color: var(--mainColor);
 }
+.details p{
+  color: var(--text-color);
 
+}
+.details ul li{
+  color: var(--text-color);
+
+
+}
 .details ul {
   list-style-type: none;
   padding: 0;
+
 }

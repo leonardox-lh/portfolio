@@ -12,6 +12,9 @@
   flex-direction: column;
   align-items: center;
 }
+.cont_a a i{
+  color: var(--mainColor);
+}
 .cont_a::after{
   content: "";
   display: block;
@@ -41,6 +44,8 @@
   border-radius: 50%;
   margin: 10px 0.5rem;
   transition: 0.3s ease;
+  text-decoration: none;
+
 }
 .cont_email{
   display: flex;

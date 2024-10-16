@@ -3,11 +3,11 @@
   margin-bottom: 30px;
   text-align: center;
   font-size: 2rem;
-  font-family: 'Roboto', sans-serif;
   font-weight: bold;
   position: relative;
   border-radius: 50%;
   transition: opacity 0.5s ease-out;
+  color: var(--mainColor);
 }
 .subtitle::before{
   content: '';
@@ -17,7 +17,7 @@
   background-color: var(--secondColor);
   box-shadow: 0 0 7px var(--mainColor);
   position: absolute;
-  top: 16px;
+  top: 23px;
   right: 20%;
   border-radius: 90px 0 0 90px;
 }
@@ -29,7 +29,7 @@
   background-color: var(--secondColor);
   box-shadow: 0 0 7px var(--mainColor);
   position: absolute;
-  bottom: 15px;
+  bottom: 23px;
   left: 20%;
   border-radius: 0 90px 90px 0;
 }

@@ -11,6 +11,7 @@ import { TitleComponent } from './title/title.component';
 import { ToolsComponent } from './tools/tools.component';
 import { EducationComponent } from './education/education.component';
 import { ProjectsComponent } from './projects/projects.component';
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { ProjectsComponent } from './projects/projects.component';
     TitleComponent,
     ToolsComponent,
     EducationComponent,
-    ProjectsComponent
+    ProjectsComponent,
+    FooterComponent
   ],
   imports: [
     BrowserAnimationsModule,
