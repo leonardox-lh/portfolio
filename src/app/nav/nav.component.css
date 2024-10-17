@@ -47,9 +47,20 @@
   text-decoration: none;
 
 }
+.navbar button{
+  width: 40px;
+  height: 40px;
+  background: none;
+  border: 1px solid var(--text-color);
+  border-radius: 50%;
+  font-size: 25px;
+  color: var(--text-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 .navbar button i{
   color: var(--text-color);
-
 }
 span{
   color: var(--mainColor);

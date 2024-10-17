@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import {MatDialog} from "@angular/material/dialog";
 
 interface Education {
   name: string;
@@ -63,7 +64,10 @@ export class EducationComponent {
 
   selectedExperience: Education = this.educations[0];
 
+  constructor() {}
+
   selectExperience(index: number): void {
     this.selectedExperience = this.educations[index];
   }
+
 }

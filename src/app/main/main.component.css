@@ -14,7 +14,7 @@
   max-width: 300px;
   height: 300px;
   transition: 0.5s;
-  box-shadow: 0 0 16px var(--mainColor);
+  box-shadow: 0 0 6px var(--mainColor);
   rotate: -4deg;
   background-color: transparent;
 }

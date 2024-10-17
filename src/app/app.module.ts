@@ -12,7 +12,9 @@ import { ToolsComponent } from './tools/tools.component';
 import { EducationComponent } from './education/education.component';
 import { ProjectsComponent } from './projects/projects.component';
 import { FooterComponent } from './footer/footer.component';
-
+/*
+import {MatDialogModule } from '@angular/material/dialog';
+*/
 @NgModule({
   declarations: [
     AppComponent,
@@ -23,7 +25,10 @@ import { FooterComponent } from './footer/footer.component';
     ToolsComponent,
     EducationComponent,
     ProjectsComponent,
-    FooterComponent
+    FooterComponent,
+/*
+    MatDialogModule
+*/
   ],
   imports: [
     BrowserAnimationsModule,

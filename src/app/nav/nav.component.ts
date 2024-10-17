@@ -24,10 +24,11 @@ import {ThemeService} from "../service/theme.service";
 export class NavComponent {
   private lastScrollTop = 0;
   isHidden = false;
-
   isMenuOpen: boolean;
+  theme: string;
   constructor(private themeService: ThemeService) {
     this.isMenuOpen = false;
+    this.theme = this.iconTheme();
   }
   toggleMenu(){
     this.isMenuOpen = !this.isMenuOpen;
@@ -43,14 +44,15 @@ export class NavComponent {
       this.isHidden = false;
     }
 
-    this.lastScrollTop = currentScroll <= 0 ? 0 : currentScroll; // Para evitar valores negativos
+    this.lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
   }
 
   toggleTheme() {
-    this.themeService.toggleTheme(); // Llama al servicio para cambiar el tema
+    this.themeService.toggleTheme();
+    this.theme = this.iconTheme();
   }
 
-  get currentTheme(): string {
-    return this.themeService.getTheme(); // Obtiene el tema actual
+  iconTheme() {
+    return this.themeService.getTheme() === 'light' ? 'fa-moon' : 'fa-sun';
   }
 }
