@@ -1,5 +1,5 @@
 <div class="socialMedia" >
-  <div class="cont_email" @enterState2>
+  <div class="cont_email" @enterState>
     <h2 class="email">leonardohuarcaya27@gmail.com</h2>
   </div>
   <div class="cont_a" @enterState>
@@ -10,4 +10,13 @@
 
 </div>
 
+<div class="menu-container" @enterState2>
+  <button class="main-button" (click)="toggleMenu()">ES</button>
 
+  <button class="option-button" [ngClass]="{'open': isOpen}" style="--angle: 140deg;">
+    <span title="Español">ES</span>
+  </button>
+  <button class="option-button" [ngClass]="{'open': isOpen}" style="--angle: 220deg;">
+    <span title="Español">EN</span>
+  </button>
+</div>

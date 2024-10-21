@@ -25,12 +25,12 @@ a{
   padding: 5px 10px;
   background-color: var(--backgroundColor);
   color: var(--mainColor);
-
   border-radius: 5px;
   font-size: 20px;
   font-family: 'Calibre', 'Inter', 'San Francisco', 'SF Pro Text', -apple-system, system-ui, sans-serif;
   cursor: pointer;
   transition: 0.5s;
+  border: 2px solid var(--mainColor);
 }
 button:hover{
   background-color: var(--secondColor);

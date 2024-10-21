@@ -8,24 +8,24 @@ import {animate, state, style, transition, trigger} from "@angular/animations";
   animations: [
     trigger('enterState', [
       state('void', style({
-        transform: 'translateY(50%)',
+        transform: 'translateX(-100%)',
         opacity: 0
       })),
       transition(':enter',[
         animate(800,style({
-          transform: 'translateY(0)',
+          transform: 'translateX(0)',
           opacity: 1
         }))
       ]),
     ]),
     trigger('enterState2', [
       state('void', style({
-        transform: 'translateY(-50%)',
+        transform: 'translateX(100%)',
         opacity: 0
       })),
       transition(':enter',[
         animate(800,style({
-          transform: 'translateY(0)',
+          transform: 'translateX(0)',
           opacity: 1
         }))
       ]),
@@ -34,4 +34,9 @@ import {animate, state, style, transition, trigger} from "@angular/animations";
 })
 export class IconsComponent {
 
+  isOpen = false;
+
+  toggleMenu() {
+    this.isOpen = !this.isOpen;
+  }
 }

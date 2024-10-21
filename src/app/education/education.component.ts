@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import {MatDialog} from "@angular/material/dialog";
+import {ModalComponent} from "../modal/modal.component";
 
 interface Education {
   name: string;
@@ -64,10 +65,13 @@ export class EducationComponent {
 
   selectedExperience: Education = this.educations[0];
 
-  constructor() {}
+  constructor(private dialog: MatDialog) {}
 
   selectExperience(index: number): void {
     this.selectedExperience = this.educations[index];
   }
 
+  openDialog() {
+    this.dialog.open(ModalComponent);
+  }
 }

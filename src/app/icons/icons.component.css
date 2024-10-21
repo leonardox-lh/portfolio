@@ -65,3 +65,51 @@
   color: var(--mainColor);
   box-shadow: 0 0 25px var(--mainColor);
 }
+
+/* desplegable */
+.menu-container {
+  position: fixed;
+  top: 50%;
+  display: inline-block;
+  right: 30px;
+  z-index: 1000;
+}
+
+.main-button {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: var(--mainColor);
+  color: var(--text-color);
+  border: none;
+  cursor: pointer;
+  position: relative;
+}
+
+.option-button {
+  position: absolute;
+  top: 6px;
+  left: 0;
+  transform: translate(-50%, -50%);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: var(--secondColor);
+  color: white;
+  border: none;
+  cursor: pointer;
+  opacity: 0;
+  transition: transform 0.3s, opacity 0.3s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+span{
+  color: var(--text-color);
+  font-size: 15px;
+}
+.option-button.open {
+  transform: scale(1) translate(calc(50px * cos(var(--angle))), calc(50px * sin(var(--angle))));
+  opacity: 1;
+  transition: transform 0.3s, opacity 0.3s;
+}

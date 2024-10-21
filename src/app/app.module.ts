@@ -12,9 +12,9 @@ import { ToolsComponent } from './tools/tools.component';
 import { EducationComponent } from './education/education.component';
 import { ProjectsComponent } from './projects/projects.component';
 import { FooterComponent } from './footer/footer.component';
-/*
 import {MatDialogModule } from '@angular/material/dialog';
-*/
+import { ModalComponent } from './modal/modal.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -26,14 +26,13 @@ import {MatDialogModule } from '@angular/material/dialog';
     EducationComponent,
     ProjectsComponent,
     FooterComponent,
-/*
-    MatDialogModule
-*/
+    ModalComponent
   ],
   imports: [
     BrowserAnimationsModule,
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    MatDialogModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
