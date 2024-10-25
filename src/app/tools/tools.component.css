@@ -91,13 +91,18 @@
   }
 }*/
 
-i{
-  color: var(--mainColor);
-  font-size: 30px;
-  padding: 15px;
+
+img{
+  width: 30px;
   cursor: pointer;
+  filter: var(--layerColor);
+
 }
-i:hover::after {
+img:hover{
+  filter: none;
+}
+
+.cont_icon:hover::after{
   content: attr(title);
   position: absolute;
   bottom: 100%;
@@ -110,4 +115,12 @@ i:hover::after {
   font-size: 14px;
   z-index: 1;
   margin-bottom: 5px;
+  font-family: "Font Awesome 6 Brands";
 }
+.cont_icon{
+  color: var(--mainColor);
+  font-size: 30px;
+  padding: 13px;
+  cursor: pointer;
+}
+

@@ -56,7 +56,6 @@
 #carousel-item img{
   height: 100%;
   width: auto;
-  object-fit: cover;
 }
 .carousel-inner{
   border-radius: 10px;
@@ -91,21 +90,51 @@
   color: var(--mainColor);
 }
 
+
+.textProject p,
+.textProject h5{
+  color: var(--text-color);
+
+}
 .tools_projects{
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   margin-bottom: 20px;
 }
-.textProject p,
-.textProject h5{
-  color: var(--text-color);
-
-}
 .tools_projects i{
     font-size: 30px;
     margin-right: 10px;
     color: var(--mainColor);
+}
+.cont_icon:hover::after{
+  content: attr(title);
+  position: absolute;
+  bottom: 42%;
+  left: 75%;
+  transform: translateX(-50%);
+  color: var(--mainColor);
+  padding: 5px 10px;
+  border-radius: 5px;
+  white-space: nowrap;
+  font-size: 14px;
+  z-index: 1;
+  margin-bottom: 5px;
+  font-family: "Font Awesome 6 Brands";
+}
+.cont_icon{
+  color: var(--mainColor);
+  padding: 8px;
+  cursor: pointer;
+}
+.cont_icon img{
+  width: 30px;
+  cursor: pointer;
+  filter: var(--layerColor);
+
+}
+.cont_icon img:hover{
+  filter: none;
 }
 .cont_btn{
   display: flex;
@@ -117,3 +146,4 @@
   color: var(--text-color);
   font-size: 20px;
 }
+

@@ -40,6 +40,7 @@ button:hover{
 :root{
   --mainColor: rgb(17, 154, 149);
   --secondColor: rgba(52, 192, 47, 0.51);
+  --layerColor: brightness(0) saturate(100%) invert(44%) sepia(75%) saturate(2299%) hue-rotate(147deg) brightness(89%) contrast(87%);
   --backgroundColor: rgb(10, 25, 47);
   --black: rgb(0, 0, 0);
   --white: rgb(116, 215, 116);

@@ -10,6 +10,7 @@ export class ProjectsComponent {
   projects = [
     {
       name: 'Arquimentor',
+      time: 'Agosto 2023 — noviembre 2023',
       description: 'Arquimentor es una plataforma de aprendizaje en linea ' +
         ' para estudiantes de arquitectura y diseño, donde pueden contactar ' +
         'con diversos mentores personalizados.',
@@ -22,17 +23,68 @@ export class ProjectsComponent {
         "../../assets/img/projects/arq4.png",
         "../../assets/img/projects/arq5.png",
         "../../assets/img/projects/arq6.png",],
-      tools: ["fab fa-angular","fa-solid fa-leaf", "fa-solid fa-a", "fab fa-bootstrap"],
+      tools: [
+        ["fab fa-angular", "Angular"],
+        ["fa-solid fa-leaf", "NodeJS"],
+        ["fa-solid fa-a", "MongoDB"],
+        ["fab fa-bootstrap", "Bootstrap"],
+        ["fas fa-database", "Mysql"],
+        ["fab fa-firebase", "Firebase"]
+      ],
       url: "https://arquimentor-7e645.firebaseapp.com/login",
       github: "https://github.com/leonardox-lh/arquimentor-platform"
     },
     {
-      name: 'Proyecto 2',
-      description: 'Descripción del proyecto 1',
-      images: ["../../assets/img/img1.jpg", "../../assets/img/img2.jpg", "../../assets/img/img3.jpeg"],
-      tools: ["Angular", "NodeJS", "MongoDB"],
-      url: "https://www.google.com",
-      github: "https://github.com"
+      name: 'LoyalSips',
+      time: 'Agosto 2023 — noviembre 2023',
+      description: 'Plataforma creada para mejorar el sistema de administration para el sector de bares y mejorar la experiencia del cliente por medio de beneficios como descuentos, y promociones.',
+      images: [
+        "../../assets/img/projects/loyalSips/ls0.png",
+        "../../assets/img/projects/loyalSips/ls1.png",
+        "../../assets/img/projects/loyalSips/ls2.png",
+        "../../assets/img/projects/loyalSips/ls3.png",
+        "../../assets/img/projects/loyalSips/ls4.png",
+      ],
+      tools: [
+        ["../../assets/img/icons/vue.svg", "Vue"],
+        ["../../assets/img/icons/boostrap.png", "Bootstrap"],
+        ["../../assets/img/icons/.net.svg", ".Net"]
+      ],
+      url: "https://loyalsips-44e19.web.app/login-register/sector-election",
+      github: "https://github.com/orgs/Aplicaciones-Web-Point-bar/repositories"
+    },
+    {
+      name: 'The Week Hack II',
+      time: 'Abril 2024 — Agosto 2024',
+      description: "Páginas web para el evento The Week Hack II, un evento de ciberseguridad promovida por la IEEE de la UPC",
+      images: [
+        "../../assets/img/projects/TWH/twh0.png",
+        "../../assets/img/projects/TWH/twh1.png",
+        "../../assets/img/projects/TWH/twh2.png"
+      ],
+      tools: [
+        ["../../assets/img/icons/angular.png", "Angular"],
+        ["../../assets/img/icons/html.png", "Html"],
+        ["../../assets/img/icons/css.png", "Css"],
+        ["../../assets/img/icons/ts.png", "Typescript"],
+      ],
+      url: "https://ieeecs-5ed30.web.app/home",
+      github: "https://github.com/leonardox-lh/IEEEcs-TWH2"
+    },
+    {
+      name: 'Rikoton Chicken',
+      time: 'Julio 2024 — August 2024',
+      description: "Página web para la empresa Rikoton Chicken, pedidos, promociones, locales y más.",
+      images: [
+        "../../assets/img/projects/rikoton/riko1.png",
+        "../../assets/img/projects/rikoton/riko2.png",
+        "../../assets/img/projects/rikoton/riko3.png",
+      ],
+      tools: [
+        ["../../assets/img/icons/wordpress.svg", "Wordpress"]
+      ],
+      url: "https://rikotonchicken.pe/",
+      github: ""
     }
   ]
 }
