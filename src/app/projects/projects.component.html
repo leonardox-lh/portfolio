@@ -29,7 +29,9 @@
       </div>
       <div class="textProject">
         <h2>{{project.name}}</h2>
-        <p>{{project.description}}</p>
+        <div class="cont_description">
+          <p>{{project.description}}</p>
+        </div>
         <h5>Tools</h5>
         <div class="tools_projects" >
           <div *ngFor="let tool of project.tools" >

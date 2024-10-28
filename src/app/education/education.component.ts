@@ -7,6 +7,8 @@ interface Education {
   company: string;
   date: string;
   details: string[];
+  certification?: string;
+  url?: string;
 }
 @Component({
   selector: 'app-education',
@@ -21,45 +23,53 @@ export class EducationComponent {
       company: 'Software engineer',
       date: 'August 2021 – now',
       details: [
-        'Currently studying software engineering',
-        'Expected graduation in 2023'
-      ]
+        'Practicante de Ingeniería de Software - 7mo ciclo UPC. ' +
+        'Perteneciente al décimo superior, y con sólidos conocimientos en lógica de programación y diseño de software.',
+      ],
+      certification: '',
+      url: "https://www.coursera.org/account/accomplishments/specialization/ED29NMJPALSA"
     },
     {
       name: 'SQL for Data Science',
-      company: 'Coursera',
-      date: '2023',
+      company: 'University of California',
+      date: 'mayo 2024',
       details: [
-        'Worked on various front-end projects for clients using modern JavaScript frameworks',
-        'Collaborated closely with designers and back-end developers to create seamless user experiences'
-      ]
+        'Comandos para filtrar, ordenar y resumir datos. ' +
+        'Igualmente desarrollar una propuesta de proyecto y seleccionar sus datos, realizar análisis estadísticos y desarrollar métricas',
+      ],
+      certification: '../../assets/img/certificates/sql.jpeg',
+      url: "https://www.coursera.org/account/accomplishments/specialization/ED29NMJPALSA"
     },
     {
       name: 'Python for Data Science',
-      company: 'Coursera',
-      date: '2022',
+      company: 'University of Michigan',
+      date: 'Mayo 2022',
       details: [
-        'Worked on various front-end projects for clients using modern JavaScript frameworks',
-        'Collaborated closely with designers and back-end developers to create seamless user experiences'
-      ]
+        'Uso de Python para acceder a datos web, estructuras de datos y unos de base de datos con Python, POO y manejo de errores.'
+      ],
+      certification: '../../assets/img/certificates/python.jpeg',
+      url: "https://www.coursera.org/account/accomplishments/specialization/JGGT9KYSKACD"
     },
     {
       name: 'Cyber-security Analyst',
-      company: 'Udemy',
-      date: '2023',
+      company: 'IBM',
+      date: 'Noviembre 2023',
       details: [
-        'Worked on various front-end projects for clients using modern JavaScript frameworks',
-        'Collaborated closely with designers and back-end developers to create seamless user experiences'
-      ]
+        'Gestionar las vulnerabilidades de las bases de datos en la administración y seguridad de los sistemas operativos.',
+        'Uso de herramientas de seguridad para realizar pruebas de penetración y análisis forenses.'
+      ],
+      certification: '../../assets/img/certificates/security.jpeg',
+      url: "https://www.coursera.org/account/accomplishments/professional-cert/8CV4V26PNW9B"
     },
     {
       name: 'IT Basics',
       company: 'Google',
       date: '2023',
       details: [
-        'Worked on various front-end projects for clients using modern JavaScript frameworks',
-        'Collaborated closely with designers and back-end developers to create seamless user experiences'
-      ]
+        'Conocimientos en manejo de consolas mediante interfaz de comandos, en sistemas operativos window y linux.'
+      ],
+      certification: '../../assets/img/certificates/so.jpeg',
+      url: "https://www.coursera.org/account/accomplishments/verify/U77B4EXXGMMP"
     },
   ];
 
@@ -72,6 +82,9 @@ export class EducationComponent {
   }
 
   openDialog() {
-    this.dialog.open(ModalComponent);
+    const dialogRef = this.dialog.open(ModalComponent);
+    const instance = dialogRef.componentInstance;
+    instance.img = this.selectedExperience.certification;
+    instance.url = this.selectedExperience.url;
   }
 }

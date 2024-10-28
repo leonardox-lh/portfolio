@@ -73,7 +73,7 @@ export class ProjectsComponent {
     },
     {
       name: 'Rikoton Chicken',
-      time: 'Julio 2024 — August 2024',
+      time: 'Julio 2024 — Agosto 2024',
       description: "Página web para la empresa Rikoton Chicken, pedidos, promociones, locales y más.",
       images: [
         "../../assets/img/projects/rikoton/riko1.png",
