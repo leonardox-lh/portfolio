@@ -97,7 +97,7 @@ span{
   cursor: pointer;
 }
 
-@media (max-width: 1010px){
+@media (max-width: 1220px){
 
   .nav{
     justify-content: space-between;

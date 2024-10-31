@@ -6,11 +6,11 @@
   <i class="fas fa-bars" id="menuList" (click)="toggleMenu()"></i>
 
   <nav class="navbar" id="menu" [class.active]="isMenuOpen"  >
-    <a href="#Home">Bienvenido</a>
-    <a href="#Tools">Herramientas</a>
-    <a href="#education">Educación</a>
-    <a href="#projects" >Proyectos</a>
-    <a href="#Contacts">Contacto</a>
+    <a (click)="scrollToSection('home',100)">Bienvenido</a>
+    <a (click)="scrollToSection('tools',100)">Herramientas</a>
+    <a (click)="scrollToSection('education',100)">Educación</a>
+    <a (click)="scrollToSection('projects',0)">Proyectos</a>
+    <a (click)="scrollToSection('contacts',100)">Contacto</a>
     <button (click)="toggleTheme()">
       <i class="fas {{theme}}"></i>
     </button>

@@ -1,20 +1,23 @@
-<app-title [title]="title" id="education"></app-title>
-<div class="experience-container" >
-  <div class="sidebar">
-    <ul>
-      <li *ngFor="let experience of educations; let i = index"
-          (click)="selectExperience(i)"
-          [class.active]="selectedExperience === experience">
-        {{ experience.name }}
-      </li>
-    </ul>
+<section >
+  <app-title [title]="title" id="education" ></app-title>
+  <div class="experience-container" >
+    <div class="sidebar">
+      <ul>
+        <li *ngFor="let experience of educations; let i = index"
+            (click)="selectExperience(i)"
+            [class.active]="selectedExperience === experience">
+          {{ experience.name }}
+        </li>
+      </ul>
+    </div>
+    <div class="details">
+      <h3>{{ selectedExperience.name }} - {{ selectedExperience.company }}</h3>
+      <p>{{ selectedExperience.date }}</p>
+      <ul>
+        <li *ngFor="let detail of selectedExperience.details">{{ detail }}</li>
+      </ul>
+      <button (click)="openDialog()" *ngIf="selectedExperience.certification!=''">Ver certificado</button>
+    </div>
   </div>
-  <div class="details">
-    <h3>{{ selectedExperience.name }} - {{ selectedExperience.company }}</h3>
-    <p>{{ selectedExperience.date }}</p>
-    <ul>
-      <li *ngFor="let detail of selectedExperience.details">{{ detail }}</li>
-    </ul>
-    <button (click)="openDialog()">Ver certificado</button>
-  </div>
-</div>
+</section>
+

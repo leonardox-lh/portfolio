@@ -5,7 +5,7 @@
   padding: 20px;
   background-color: var(--backgroundColor);
   border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
 }
 
 .contact-item {
@@ -37,12 +37,12 @@
 .info h4 {
   margin: 0;
   font-size: 16px;
-  font-weight: bold;
-  color: #333;
+  color: var(--text-color);
 }
 
 .info p {
   margin: 5px 0 0;
   font-size: 14px;
-  color: #666;
+  color: var(--text-color);
+  font-family: Arial;
 }

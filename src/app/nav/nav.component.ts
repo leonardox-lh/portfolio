@@ -43,4 +43,14 @@ export class NavComponent {
   iconTheme() {
     return this.themeService.getTheme() === 'light' ? 'fa-moon' : 'fa-sun';
   }
+
+  scrollToSection(sectionId: string, space: number) {
+    const element = document.getElementById(sectionId);
+    let offset;
+    if (element) {
+      offset = space;
+      const topPosition = element.getBoundingClientRect().top + window.pageYOffset - offset;
+      window.scrollTo({top: topPosition, behavior: 'smooth'});
+    }
+  }
 }

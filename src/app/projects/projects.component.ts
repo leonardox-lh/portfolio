@@ -24,12 +24,9 @@ export class ProjectsComponent {
         "../../assets/img/projects/arq5.png",
         "../../assets/img/projects/arq6.png",],
       tools: [
-        ["fab fa-angular", "Angular"],
-        ["fa-solid fa-leaf", "NodeJS"],
-        ["fa-solid fa-a", "MongoDB"],
-        ["fab fa-bootstrap", "Bootstrap"],
-        ["fas fa-database", "Mysql"],
-        ["fab fa-firebase", "Firebase"]
+        ["../../assets/img/icons/angular.png", "Angular"],
+        ["../../assets/img/icons/spring-3.svg", "Spring Boot"],
+        ["../../assets/img/icons/boostrap.png", "Boostrap"]
       ],
       url: "https://arquimentor-7e645.firebaseapp.com/login",
       github: "https://github.com/leonardox-lh/arquimentor-platform"

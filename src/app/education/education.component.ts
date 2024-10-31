@@ -16,12 +16,12 @@ interface Education {
   styleUrls: ['./education.component.css']
 })
 export class EducationComponent {
-  title = 'Education';
+  title = 'Educación';
   educations: Education[] = [
     {
       name: 'University of Applied Sciences',
       company: 'Software engineer',
-      date: 'August 2021 – now',
+      date: 'Agosto 2021 – ahora',
       details: [
         'Practicante de Ingeniería de Software - 7mo ciclo UPC. ' +
         'Perteneciente al décimo superior, y con sólidos conocimientos en lógica de programación y diseño de software.',
@@ -32,7 +32,7 @@ export class EducationComponent {
     {
       name: 'SQL for Data Science',
       company: 'University of California',
-      date: 'mayo 2024',
+      date: 'Mayo 2024',
       details: [
         'Comandos para filtrar, ordenar y resumir datos. ' +
         'Igualmente desarrollar una propuesta de proyecto y seleccionar sus datos, realizar análisis estadísticos y desarrollar métricas',
