@@ -34,18 +34,6 @@ export class NavComponent {
     this.isMenuOpen = !this.isMenuOpen;
   }
 
-  @HostListener('window:scroll', [])
-  onWindowScroll() {
-    const currentScroll = window.pageYOffset || document.documentElement.scrollTop;
-
-    if (currentScroll > this.lastScrollTop) {
-      this.isHidden = true;
-    } else {
-      this.isHidden = false;
-    }
-
-    this.lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
-  }
 
   toggleTheme() {
     this.themeService.toggleTheme();

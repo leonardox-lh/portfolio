@@ -1,6 +1,5 @@
-
 .cont_main{
-  margin: 100px 30px;
+  margin-top: 100px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -19,8 +18,10 @@
   background-color: transparent;
 }
 .cont_text{
-  margin: 15px 60px;
-
+  margin: 15px 10px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
 }
 .main_img img{
   position: absolute;
@@ -41,6 +42,8 @@ h1{
   font-size: 20px;
   font-family: 'Calibre', 'Inter', 'San Francisco', 'SF Pro Text', -apple-system, system-ui, sans-serif;
   color: var(--text-color);
+  display: -ms-flexbox;
+  flex-wrap: wrap;
 }
 .name{
   color: var(--mainColor);
@@ -71,4 +74,25 @@ h1{
 .cont_btn a:hover{
   color: var(--mainColor);
   box-shadow: 0 0 10px var(--mainColor);
+}
+
+@media screen and (max-width: 1020px){
+  .cont_main{
+    flex-direction: column;
+  }
+  .cont_text{
+    margin: 15px 30px;
+    justify-content: center;
+    align-items: center;
+  }
+  .sub_title {
+    font-size: 50px;
+    text-align: center;
+  }
+  .cont_btn{
+    margin-top: 10px;
+  }
+  .cont_btn a{
+    margin-left: 50px;
+  }
 }

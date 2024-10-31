@@ -103,13 +103,7 @@ span{
     justify-content: space-between;
   }
   .space{
-    height: 70px;
-  }
-
-  @media (max-width: 768px){
-    .logoimg{
-      width: 280px;
-    }
+    height: 90px;
   }
 
   #menuList{
@@ -124,15 +118,12 @@ span{
     position: absolute;
     flex-direction: column;
     top:100%;
-    left: 65%;
-    width: 35%;
+    right: 0;
+    width: 130px;
     border-left: 3px solid var(--mainColor);
     border-bottom: 3px solid var(--mainColor);
-    border-bottom-left-radius: 2rem;
     padding: 1rem 3%;
     display: none;
-    transition: 0.5s;
-    border-top: 0.1rem solid black;
     background-color: var(--backgroundColor );
   }
 

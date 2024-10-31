@@ -14,6 +14,7 @@ import { ProjectsComponent } from './projects/projects.component';
 import { FooterComponent } from './footer/footer.component';
 import {MatDialogModule } from '@angular/material/dialog';
 import { ModalComponent } from './modal/modal.component';
+import { ContactComponent } from './contact/contact.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { ModalComponent } from './modal/modal.component';
     EducationComponent,
     ProjectsComponent,
     FooterComponent,
-    ModalComponent
+    ModalComponent,
+    ContactComponent
   ],
   imports: [
     BrowserAnimationsModule,
