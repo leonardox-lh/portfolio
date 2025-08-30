@@ -9,6 +9,42 @@ export class ProjectsComponent {
   title = 'Proyectos';
   projects = [
     {
+      name: 'SIGMA',
+      time: 'Enero 2025 — Agosto 2025',
+      description: 'ERP para la gestión empresarial del sector automotriz.\n \t' +
+      'Refactorización de código y mejora de la experiencia del usuario.',
+      role: 'Desarrollador Frontend',
+      images: [
+        "../../assets/img/projects/sigma/1.png",
+        "../../assets/img/projects/sigma/2.png",
+        "../../assets/img/projects/sigma/3.png",
+        "../../assets/img/projects/sigma/4.png",],
+      tools: [
+        ["../../assets/img/icons/vue.svg", "Vue 3"],
+        ["../../assets/img/icons/vuetify.svg", "Vuetify"],
+        ["../../assets/img/icons/figma.svg", "Figma"]
+      ],
+      url: "https://dms.sigma-peru.com/home",
+      github: ""
+    },
+    {
+      name: 'Rous accessorios',
+      time: 'Enero 2025 — Agosto 2025',
+      description: 'Desarrollo de una tienda virtual para la venta de diversos productos',
+      role: 'Desarrollador Fullstack',
+      images: [
+        "../../assets/img/projects/rous/1.png",
+        "../../assets/img/projects/rous/2.png",
+        "../../assets/img/projects/rous/3.png",],
+      tools: [
+        ["../../assets/img/icons/vue.svg", "Vue 3"],
+        ["../../assets/img/icons/spring-3.svg", "Spring Boot"],
+        ["../../assets/img/icons/mysql.png", "MySQL"]
+      ],
+      url: "https://catalogfront-production.up.railway.app/home",
+      github: ""
+    },
+    {
       name: 'Arquimentor',
       time: 'Agosto 2023 — noviembre 2023',
       description: 'Arquimentor es una plataforma de aprendizaje en linea ' +
@@ -45,7 +81,7 @@ export class ProjectsComponent {
       tools: [
         ["../../assets/img/icons/vue.svg", "Vue"],
         ["../../assets/img/icons/boostrap.png", "Bootstrap"],
-        ["../../assets/img/icons/.net.svg", ".Net"]
+        ["../../assets/img/icons/net.svg", ".Net"]
       ],
       url: "https://loyalsips-44e19.web.app/login-register/sector-election",
       github: "https://github.com/orgs/Aplicaciones-Web-Point-bar/repositories"

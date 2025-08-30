@@ -1,6 +1,5 @@
-
-<section  class="projects">
-  <app-title [title]="title" id="projects"></app-title>
+<section  class="projects" id="projects">
+  <app-title [title]="title" ></app-title>
   <div class="projectsContent" *ngFor="let project of projects; let i = index">
     <div class="project">
       <div class="contentCarrusel">
@@ -31,6 +30,10 @@
         <h2>{{project.name}}</h2>
         <div class="cont_description">
           <p>{{project.description}}</p>
+        </div>
+        <div style="display: flex; align-content: center">
+          <h5>Rol</h5>
+          <p style="margin:5px 0 0 10px; display: flex; align-content: center; text-align: center">{{project?.role}}</p>
         </div>
         <h5>Tools</h5>
         <div class="tools_projects" >

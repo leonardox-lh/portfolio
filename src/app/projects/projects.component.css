@@ -1,3 +1,6 @@
+#projects{
+  padding-top: 120px;
+}
 .projects{
   display: flex;
   flex-direction: column;
@@ -68,9 +71,16 @@
 .carousel-control-prev,
 .carousel-control-next:hover{
   background-color: transparent;
-  box-shadow:  0 var(--secondColor);
 }
 
+.carousel-control-prev-icon{
+  background-color: var(--mainColor);
+  border-radius: 5px;
+}
+.carousel-control-next-icon{
+  background-color: var(--mainColor);
+  border-radius: 5px;
+}
 /*texto*/
 
 .textProject{
@@ -132,6 +142,7 @@
 }
 .cont_icon img{
   width: 30px;
+  height: 30px !important;
   cursor: pointer;
   filter: var(--layerColor);
 

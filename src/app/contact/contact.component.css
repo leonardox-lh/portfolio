@@ -1,17 +1,21 @@
+#contacts{
+  padding: 120px 0;
+}
 .contact-card {
-  width: 80%;
-  max-width: 600px;
+  width: 100%;
   margin: 20px auto;
   padding: 20px;
   background-color: var(--backgroundColor);
   border-radius: 8px;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  margin-bottom: 150px;
 }
 
 .contact-item {
   display: flex;
   align-items: center;
-  margin-bottom: 20px;
+
+  margin-bottom: 50px;
 }
 
 .contact-item:last-child {

@@ -1,4 +1,4 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, HostListener, OnInit} from '@angular/core';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -7,13 +7,9 @@ import {Component, OnInit} from '@angular/core';
 export class AppComponent implements OnInit {
 
 
-  constructor() {
-
-  }
   ngOnInit(): void {
-   /* setTimeout(() => {
-      window.scrollTo(0, 0);
-    }, 0);*/
+    setTimeout(() => {
+       window.scrollTo(0, 0);
+     }, 0);
   }
-
 }

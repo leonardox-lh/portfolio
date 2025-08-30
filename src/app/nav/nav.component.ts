@@ -26,6 +26,8 @@ export class NavComponent {
   isHidden = false;
   isMenuOpen: boolean;
   theme: string;
+  activeSection = 'home';
+
   constructor(private themeService: ThemeService) {
     this.isMenuOpen = false;
     this.theme = this.iconTheme();
@@ -34,6 +36,16 @@ export class NavComponent {
     this.isMenuOpen = !this.isMenuOpen;
   }
 
+  @HostListener('window:scroll', [])
+  onWindowScroll() {
+    const currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+    if (currentScroll > this.lastScrollTop) {
+      this.isHidden = true;
+    } else {
+      this.isHidden = false;
+    }
+    this.lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
+  }
 
   toggleTheme() {
     this.themeService.toggleTheme();
@@ -44,13 +56,30 @@ export class NavComponent {
     return this.themeService.getTheme() === 'light' ? 'fa-moon' : 'fa-sun';
   }
 
-  scrollToSection(sectionId: string, space: number) {
+  scrollToSection(sectionId: string) {
     const element = document.getElementById(sectionId);
     let offset;
     if (element) {
-      offset = space;
-      const topPosition = element.getBoundingClientRect().top + window.pageYOffset - offset;
+      const topPosition = element.getBoundingClientRect().top + window.pageYOffset;
       window.scrollTo({top: topPosition, behavior: 'smooth'});
+      setTimeout(() => {
+        this.activeSection = sectionId;
+      }, 1000);
+    }
+  }
+  @HostListener('window:scroll', [])
+  onScroll(): void {
+    const sections = document.querySelectorAll('section');
+    let active = null;
+
+    sections.forEach((section: any) => {
+      const rect = section.getBoundingClientRect();
+      if (rect.top <= 10 && rect.bottom >= 0) {
+        this.activeSection = section.id;
+      }
+    });
+    if (active && this.activeSection !== active) {
+      this.activeSection = active;
     }
   }
 }

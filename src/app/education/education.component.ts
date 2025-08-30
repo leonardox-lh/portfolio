@@ -21,10 +21,13 @@ export class EducationComponent {
     {
       name: 'University of Applied Sciences',
       company: 'Software engineer',
-      date: 'Agosto 2021 – ahora',
+      date: 'Agosto 2021 – actualidad',
       details: [
-        'Practicante de Ingeniería de Software - 7mo ciclo UPC. ' +
-        'Perteneciente al décimo superior, y con sólidos conocimientos en lógica de programación y diseño de software.',
+        'Estudiante de 9.º ciclo en la UPC, perteneciente al décimo superior.',
+
+        'Sólidos conocimientos en lógica de programación, estructuras de datos y diseño de software.',
+
+          'Enfoque en la aplicación de metodologías ágiles y buenas prácticas de desarrollo.',
       ],
       certification: '',
       url: "https://www.coursera.org/account/accomplishments/specialization/ED29NMJPALSA"

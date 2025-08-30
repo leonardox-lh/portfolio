@@ -1,3 +1,6 @@
+#education{
+  padding-top: 120px;
+}
 .experience-container {
   display: flex;
   width: 100%;
@@ -23,11 +26,13 @@
   font-family: var(--font-sans) ;
   border-left-color: var(--secondColor);
   color: var(--text-color);
+  border-radius:  0 5px 5px 0;
 }
 
 .sidebar li.active {
-  background-color: var(--backgroundColor);
+  background-color: var(--tertiaryColor);
   border-left-color: var(--mainColor);
+
 }
 
 .details{

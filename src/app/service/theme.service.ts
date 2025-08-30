@@ -11,6 +11,9 @@ export class ThemeService {
       this.theme = savedTheme;
       this.setTheme(this.theme);
     }
+    else {
+      this.setTheme('light');
+    }
   }
 
   setTheme(theme: string): void {
@@ -20,7 +23,11 @@ export class ThemeService {
   }
 
   toggleTheme(): void {
-    this.theme = this.theme === 'light' ? 'dark' : 'light';
+    if (this.theme === null) {
+      this.theme = 'light';
+    }
+    else
+      this.theme = this.theme === 'dark' ? 'light' : 'dark';
     this.setTheme(this.theme);
   }
 
