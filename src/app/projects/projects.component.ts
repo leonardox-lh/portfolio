@@ -50,6 +50,7 @@ export class ProjectsComponent {
       description: 'Arquimentor es una plataforma de aprendizaje en linea ' +
         ' para estudiantes de arquitectura y diseño, donde pueden contactar ' +
         'con diversos mentores personalizados.',
+      role: 'Desarrollador Fullstack',
       images: [
         "../../assets/img/projects/arq.png",
         "../../assets/img/projects/arq0.png",
@@ -71,6 +72,7 @@ export class ProjectsComponent {
       name: 'LoyalSips',
       time: 'Agosto 2023 — noviembre 2023',
       description: 'Plataforma creada para mejorar el sistema de administration para el sector de bares y mejorar la experiencia del cliente por medio de beneficios como descuentos, y promociones.',
+      role: 'Desarrollador Fullstack',
       images: [
         "../../assets/img/projects/loyalSips/ls0.png",
         "../../assets/img/projects/loyalSips/ls1.png",
@@ -90,6 +92,7 @@ export class ProjectsComponent {
       name: 'The Week Hack II',
       time: 'Abril 2024 — Agosto 2024',
       description: "Páginas web para el evento The Week Hack II, un evento de ciberseguridad promovida por la IEEE de la UPC",
+      role: 'Desarrollador Frontend',
       images: [
         "../../assets/img/projects/TWH/twh0.png",
         "../../assets/img/projects/TWH/twh1.png",
@@ -108,6 +111,7 @@ export class ProjectsComponent {
       name: 'Rikoton Chicken',
       time: 'Julio 2024 — Agosto 2024',
       description: "Página web para la empresa Rikoton Chicken, pedidos, promociones, locales y más.",
+      role: 'Desarrollador Frontend',
       images: [
         "../../assets/img/projects/rikoton/riko1.png",
         "../../assets/img/projects/rikoton/riko2.png",
