@@ -1,7 +1,7 @@
 <section id="tools">
-  <app-title [title]="tools" ></app-title>
+  <app-title [title]="tools" scrollReveal [revealDelay]="0"></app-title>
   <div class="tools">
-    <div class="cont_tools">
+    <div class="cont_tools" scrollReveal [revealDelay]="0" revealDirection="left">
       <div class="title">
         Frontend Development
       </div>
@@ -9,17 +9,14 @@
         Especializado en Vue.js y Angular para construir interfaces dinámicas y responsivas
       </div>
       <div class="icons">
-        <div class="cont_icon" title="Html5"><img src="assets/img/icons/html.png"></div>
-        <div class="cont_icon" title="css3"><img src="assets/img/icons/css.png"></div>
-        <div class="cont_icon" title="java Script"><img src="assets/img/icons/js.png"></div>
         <div class="cont_icon" title="boostrap"><img src="assets/img/icons/boostrap.png"></div>
         <div class="cont_icon" title="angular"><img src="assets/img/icons/angular.png"></div>
         <div class="cont_icon" title="vue"><img src="assets/img/icons/vue.svg"></div>
+        <div class="cont_icon" title="react"><img src="assets/img/icons/React.png"></div>
         <div class="cont_icon" title="wordpress"><img src="assets/img/icons/wordpress.svg"></div>
-
       </div>
     </div>
-    <div class="cont_tools">
+    <div class="cont_tools" scrollReveal [revealDelay]="150">
       <div class="title">
         Backend Development
       </div>
@@ -33,7 +30,7 @@
         <div class="cont_icon" title="php"><img src="assets/img/icons/php.svg"></div>
       </div>
     </div>
-    <div class="cont_tools">
+    <div class="cont_tools" scrollReveal [revealDelay]="300" revealDirection="right">
       <div class="title">
         Other tools
       </div>
@@ -45,7 +42,7 @@
         <div class="cont_icon" title="azure"><img src="assets/img/icons/azure.png"></div>
         <div class="cont_icon" title="flutter"><img src="assets/img/icons/flutter.png"></div>
         <div class="cont_icon" title="My Sql"><img src="assets/img/icons/mysql.png"></div>
-
+        <div class="cont_icon" title="My Sql"><img src="assets/img/icons/postgres.png"></div>
       </div>
     </div>
   </div>

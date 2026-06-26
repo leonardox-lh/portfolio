@@ -1,56 +1,66 @@
-<section  class="projects" id="projects">
-  <app-title [title]="title" ></app-title>
-  <div class="projectsContent" *ngFor="let project of projects; let i = index">
-    <div class="project">
-      <div class="contentCarrusel">
-        <div id="carouselExampleIndicators{{i}}" class="carousel slide">
-          <div class="carousel-inner">
-            <div *ngFor="let image of project.images; let j = index"
-                 class="carousel-item"
-                 [class.active]="j === 0"
-                 id="carousel-item">
-              <img [src]="image" class="d-block w-100" alt="...">
-            </div>
+<section class="projects" id="projects">
+  <app-title [title]="title" scrollReveal></app-title>
+
+  <div class="projects-grid">
+    <div class="project-card" *ngFor="let project of projects; let i = index" scrollReveal [revealDelay]="i * 100">
+
+      <!-- Browser frame -->
+      <div class="browser-frame" (click)="toggleInfo(i)">
+        <div class="browser-bar">
+          <span class="dot dot-red"></span>
+          <span class="dot dot-yellow"></span>
+          <span class="dot dot-green"></span>
+          <div class="browser-url">
+            <i class="fas fa-lock"></i>
+            <span>{{ project.url }}</span>
           </div>
-          <button class="carousel-control-prev" type="button"
-                  [attr.data-bs-target]="'#carouselExampleIndicators' + i"
-                  data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Previous</span>
+          <button class="expand-btn" title="Ver imagen completa"
+                  (click)="openLightbox(project.images[activeImage[i] || 0]); $event.stopPropagation()">
+            <i class="fas fa-expand"></i>
           </button>
-          <button class="carousel-control-next" type="button"
-                  [attr.data-bs-target]="'#carouselExampleIndicators' + i"
-                  data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Next</span>
-          </button>
-        </div>
-      </div>
-      <div class="textProject">
-        <h2>{{project.name}}</h2>
-        <div class="cont_description">
-          <p>{{project.description}}</p>
-        </div>
-        <div style="display: flex; align-content: center">
-          <h5>Rol</h5>
-          <p style="margin:5px 0 0 10px; display: flex; align-content: center; text-align: center">{{project?.role}}</p>
-        </div>
-        <h5>Tools</h5>
-        <div class="tools_projects" >
-          <div *ngFor="let tool of project.tools" >
-            <div class="cont_icon" [title]="tool[1]"><img [src]="tool[0]"></div>
-          </div>
-        </div>
-        <div class="cont_btn">
-          <button type="button" *ngIf="project.github!=''">
-            <a [href]=project.github><i class="fa-solid fa-code"></i></a>
-          </button>
-          <button type="button">
-            <a [href]=project.url><i class="fa-solid fa-globe"></i></a>
-          </button>
+          <span class="info-hint" title="Ver info"><i class="fas fa-info-circle"></i></span>
         </div>
 
+        <div class="browser-screen">
+          <img [src]="project.images[activeImage[i] || 0]" alt="{{ project.name }}" class="browser-img">
+
+          <!-- Info overlay -->
+          <div class="info-overlay" [class.info-overlay-open]="openInfo[i]" (click)="$event.stopPropagation()">
+            <button class="overlay-close" (click)="toggleInfo(i)"><i class="fas fa-times"></i></button>
+            <h2>{{ project.name }}</h2>
+            <p class="overlay-role"><i class="fas fa-user-tie"></i> {{ project.role }}</p>
+            <p class="overlay-desc">{{ project.description }}</p>
+            <div class="overlay-tools">
+              <img *ngFor="let tool of project.tools" [src]="tool[0]" [title]="tool[1]">
+            </div>
+            <div class="overlay-btns">
+              <a *ngIf="project.github" [href]="project.github" target="_blank" class="overlay-btn">
+                <i class="fa-solid fa-code"></i> Código
+              </a>
+              <a [href]="project.url" target="_blank" class="overlay-btn overlay-btn-primary">
+                <i class="fa-solid fa-globe"></i> Ver proyecto
+              </a>
+            </div>
+          </div>
+        </div>
       </div>
+
+      <!-- Thumbnails -->
+      <div class="thumbnails" *ngIf="project.images.length > 1">
+        <div *ngFor="let img of project.images; let j = index"
+             class="thumb"
+             [class.thumb-active]="(activeImage[i] || 0) === j"
+             (click)="setImage(i, j)">
+          <img [src]="img" alt="">
+        </div>
+      </div>
+
     </div>
   </div>
 </section>
+
+<!-- Lightbox -->
+<div class="lightbox" *ngIf="lightboxSrc" (click)="closeLightbox()">
+  <button class="lightbox-close" (click)="closeLightbox()"><i class="fas fa-times"></i></button>
+  <img [src]="lightboxSrc" alt="" (click)="$event.stopPropagation()">
+</div>

@@ -1,6 +1,6 @@
 <section id="education">
-  <app-title [title]="title"  ></app-title>
-  <div class="experience-container" >
+  <app-title [title]="title" scrollReveal></app-title>
+  <div class="experience-container" scrollReveal [revealDelay]="150">
     <div class="sidebar">
       <ul>
         <li *ngFor="let experience of educations; let i = index"

@@ -16,7 +16,8 @@
   background-color: var(--secondColor);
   box-shadow: 0 0 7px var(--mainColor);
   position: absolute;
-  top: 23px;
+  top: 50%;
+  transform: translateY(-50%);
   right: 20%;
   border-radius: 90px 0 0 90px;
 }
@@ -28,7 +29,8 @@
   background-color: var(--secondColor);
   box-shadow: 0 0 7px var(--mainColor);
   position: absolute;
-  bottom: 23px;
+  top: 50%;
+  transform: translateY(-50%);
   left: 20%;
   border-radius: 0 90px 90px 0;
 }

@@ -1,3 +1,15 @@
+<!-- Splash screen -->
+<div class="splash" *ngIf="showSplash" [class.splash-out]="hideSplash">
+  <div class="splash-logo">
+    <span class="splash-bracket">&lt;</span>
+    <span class="splash-name">Leonard</span>
+    <span class="splash-bracket">/&gt;</span>
+  </div>
+  <div class="splash-bar">
+    <div class="splash-progress"></div>
+  </div>
+</div>
+
 <app-nav></app-nav>
 <app-icons></app-icons>
 <div class="content_body">

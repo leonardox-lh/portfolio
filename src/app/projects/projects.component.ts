@@ -7,6 +7,27 @@ import { Component } from '@angular/core';
 })
 export class ProjectsComponent {
   title = 'Proyectos';
+  activeImage: Record<number, number> = {};
+  openInfo: Record<number, boolean> = {};
+  lightboxSrc: string | null = null;
+
+  setImage(projectIndex: number, imageIndex: number) {
+    this.activeImage[projectIndex] = imageIndex;
+  }
+
+  toggleInfo(projectIndex: number) {
+    this.openInfo[projectIndex] = !this.openInfo[projectIndex];
+  }
+
+  openLightbox(src: string) {
+    this.lightboxSrc = src;
+    document.body.style.overflow = 'hidden';
+  }
+
+  closeLightbox() {
+    this.lightboxSrc = null;
+    document.body.style.overflow = '';
+  }
   projects = [
     {
       name: 'SIGMA',
