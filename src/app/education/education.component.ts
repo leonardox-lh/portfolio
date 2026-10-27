@@ -1,79 +1,84 @@
 import { Component } from '@angular/core';
-import {MatDialog} from "@angular/material/dialog";
-import {ModalComponent} from "../modal/modal.component";
+import { MatDialog } from "@angular/material/dialog";
+import { ModalComponent } from "../modal/modal.component";
 
 interface Education {
   name: string;
   company: string;
   date: string;
+  icon: string;
   details: string[];
   certification?: string;
   url?: string;
 }
+
 @Component({
   selector: 'app-education',
   templateUrl: './education.component.html',
   styleUrls: ['./education.component.css']
 })
 export class EducationComponent {
-  title = 'Educación';
   educations: Education[] = [
     {
-      name: 'University of Applied Sciences',
-      company: 'Software engineer',
-      date: 'Agosto 2021 – actualidad',
+      name: 'Ingeniería de Software',
+      company: 'Universidad Peruana de Ciencias Aplicadas (UPC)',
+      date: 'Agosto 2021 — Diciembre 2026',
+      icon: 'fas fa-graduation-cap',
       details: [
-        'Estudiante de 9.º ciclo en la UPC, perteneciente al décimo superior.',
-
-        'Sólidos conocimientos en lógica de programación, estructuras de datos y diseño de software.',
-
-          'Enfoque en la aplicación de metodologías ágiles y buenas prácticas de desarrollo.',
+        'Bachiller de Ingeniería de Software, perteneciente al décimo superior.',
+        'Tesis en Machine Learning (Knowledge Tracing) aplicado a la educación financiera.',
+        'Sólidos fundamentos en estructuras de datos, diseño de software y metodologías ágiles.'
       ],
       certification: '',
-      url: "https://www.coursera.org/account/accomplishments/specialization/ED29NMJPALSA"
+      url: ''
+    },
+    {
+      name: 'Machine Learning',
+      company: 'Google Cloud · Coursera',
+      date: '2024',
+      icon: 'fas fa-brain',
+      details: [
+        'Fundamentos de Machine Learning y su aplicación con herramientas de Google Cloud.'
+      ],
+      certification: '',
+      url: 'https://www.coursera.org/account/accomplishments/certificate/M90L9K3WD7PJ'
     },
     {
       name: 'SQL for Data Science',
-      company: 'University of California',
+      company: 'University of California, Davis · Coursera',
       date: 'Mayo 2024',
+      icon: 'fas fa-database',
       details: [
-        'Comandos para filtrar, ordenar y resumir datos. ' +
-        'Igualmente desarrollar una propuesta de proyecto y seleccionar sus datos, realizar análisis estadísticos y desarrollar métricas',
+        'Comandos para filtrar, ordenar y resumir datos.',
+        'Diseño de propuestas de análisis, selección de datos y métricas estadísticas.'
       ],
-      certification: '../../assets/img/certificates/sql.jpeg',
-      url: "https://www.coursera.org/account/accomplishments/specialization/ED29NMJPALSA"
+      certification: 'assets/img/certificates/sql.jpeg',
+      url: 'https://www.coursera.org/account/accomplishments/specialization/ED29NMJPALSA'
     },
     {
-      name: 'Python for Data Science',
-      company: 'University of Michigan',
+      name: 'Python for Everybody',
+      company: 'University of Michigan · Coursera',
       date: 'Mayo 2022',
+      icon: 'fab fa-python',
       details: [
-        'Uso de Python para acceder a datos web, estructuras de datos y unos de base de datos con Python, POO y manejo de errores.'
+        'Acceso a datos web, estructuras de datos y bases de datos con Python.',
+        'Programación orientada a objetos y manejo de errores.'
       ],
-      certification: '../../assets/img/certificates/python.jpeg',
-      url: "https://www.coursera.org/account/accomplishments/specialization/JGGT9KYSKACD"
+      certification: 'assets/img/certificates/python.jpeg',
+      url: 'https://www.coursera.org/account/accomplishments/specialization/JGGT9KYSKACD'
     },
     {
-      name: 'Cyber-security Analyst',
-      company: 'IBM',
+      name: 'Analista de Ciberseguridad',
+      company: 'IBM · Coursera',
       date: 'Noviembre 2023',
+      icon: 'fas fa-shield-halved',
       details: [
-        'Gestionar las vulnerabilidades de las bases de datos en la administración y seguridad de los sistemas operativos.',
-        'Uso de herramientas de seguridad para realizar pruebas de penetración y análisis forenses.'
+        'Gestión de vulnerabilidades y seguridad de sistemas operativos y bases de datos.',
+        'Herramientas de seguridad para pruebas de penetración y análisis forense.'
       ],
-      certification: '../../assets/img/certificates/security.jpeg',
-      url: "https://www.coursera.org/account/accomplishments/professional-cert/8CV4V26PNW9B"
-    },
-    {
-      name: 'IT Basics',
-      company: 'Google',
-      date: '2023',
-      details: [
-        'Conocimientos en manejo de consolas mediante interfaz de comandos, en sistemas operativos window y linux.'
-      ],
-      certification: '../../assets/img/certificates/so.jpeg',
-      url: "https://www.coursera.org/account/accomplishments/verify/U77B4EXXGMMP"
-    },
+      certification: 'assets/img/certificates/security.jpeg',
+      url: 'https://www.coursera.org/account/accomplishments/specialization/certificate/8CV4V26PNW9B'
+    }
   ];
 
   selectedExperience: Education = this.educations[0];
@@ -85,7 +90,7 @@ export class EducationComponent {
   }
 
   openDialog() {
-    const dialogRef = this.dialog.open(ModalComponent);
+    const dialogRef = this.dialog.open(ModalComponent, { panelClass: 'cert-dialog' });
     const instance = dialogRef.componentInstance;
     instance.img = this.selectedExperience.certification;
     instance.url = this.selectedExperience.url;

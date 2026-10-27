@@ -13,9 +13,18 @@ import {animate, state, style, transition, trigger} from "@angular/animations";
   ],
 })
 export class MainComponent implements OnInit, OnDestroy {
-  roles = ['Full Stack Developer', 'Frontend Specialist', 'Backend Engineer', 'UI/UX Enthusiast'];
+  roles = ['Desarrollador Full Stack', 'Vue 3 · React', 'Laravel · Spring Boot', 'Scrum & Clean Code'];
   displayedText = '';
   showCursor = true;
+
+  scrollTo(id: string, event: Event) {
+    event.preventDefault();
+    const el = document.getElementById(id);
+    if (el) {
+      const top = el.getBoundingClientRect().top + window.pageYOffset - 70;
+      window.scrollTo({ top, behavior: 'smooth' });
+    }
+  }
 
   private roleIndex = 0;
   private charIndex = 0;

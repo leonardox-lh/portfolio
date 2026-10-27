@@ -1,23 +1,43 @@
-<section id="education">
-  <app-title [title]="title" scrollReveal></app-title>
-  <div class="experience-container" scrollReveal [revealDelay]="150">
-    <div class="sidebar">
-      <ul>
-        <li *ngFor="let experience of educations; let i = index"
-            (click)="selectExperience(i)"
-            [class.active]="selectedExperience === experience">
-          {{ experience.name }}
-        </li>
-      </ul>
+<section class="section-pad" id="education">
+  <div class="container">
+    <div class="section-head center" scrollReveal>
+      <span class="section-kicker"><span>05.</span> Formación</span>
+      <h2 class="section-title">Educación &amp; <span class="accent-text">certificaciones</span></h2>
+      <p class="section-sub">Aprendizaje continuo respaldado por instituciones de referencia.</p>
     </div>
-    <div class="details">
-      <h3>{{ selectedExperience.name }} - {{ selectedExperience.company }}</h3>
-      <p>{{ selectedExperience.date }}</p>
-      <ul>
-        <li *ngFor="let detail of selectedExperience.details">{{ detail }}</li>
-      </ul>
-      <button (click)="openDialog()" *ngIf="selectedExperience.certification!=''">Ver certificado</button>
+
+    <div class="edu-layout" scrollReveal [revealDelay]="120">
+      <aside class="edu-tabs">
+        <button *ngFor="let e of educations; let i = index"
+                class="edu-tab" [class.active]="selectedExperience === e"
+                (click)="selectExperience(i)">
+          <i class="{{ e.icon }}"></i>
+          <span>{{ e.name }}</span>
+        </button>
+      </aside>
+
+      <div class="edu-detail">
+        <h3>{{ selectedExperience.name }}</h3>
+        <p class="edu-company">{{ selectedExperience.company }}</p>
+        <p class="edu-date"><i class="far fa-calendar"></i> {{ selectedExperience.date }}</p>
+
+        <ul class="edu-points">
+          <li *ngFor="let d of selectedExperience.details">
+            <i class="fas fa-check"></i><span>{{ d }}</span>
+          </li>
+        </ul>
+
+        <div class="edu-actions">
+          <button class="act act-primary" *ngIf="selectedExperience.certification"
+                  (click)="openDialog()">
+            <i class="far fa-image"></i> Ver certificado
+          </button>
+          <a class="act" *ngIf="selectedExperience.url"
+             [href]="selectedExperience.url" target="_blank" rel="noopener">
+            <i class="fas fa-arrow-up-right-from-square"></i> Verificar credencial
+          </a>
+        </div>
+      </div>
     </div>
   </div>
 </section>
-

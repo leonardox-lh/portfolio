@@ -1,25 +1,28 @@
-<div class="nav" @enterState [class.hidden]="isHidden">
+<header class="nav" @enterState [class.hidden]="isHidden" [class.scrolled]="scrolled">
+  <a href="#home" class="logo" (click)="scrollToSection('home'); $event.preventDefault()">
+    <span class="bracket">&lt;</span>Leonardo<span class="bracket">/&gt;</span>
+  </a>
 
-  <div class="logo">
-    <a href=""><h1><span>&lt;</span>Leonard<span>/&gt;</span></h1></a>
-  </div>
-  <i class="fas fa-bars" id="menuList" (click)="toggleMenu()"></i>
-
-  <nav class="navbar" id="menu" [class.active]="isMenuOpen">
+  <nav class="navbar" [class.active]="isMenuOpen">
     <ul>
-      <li [class.active]="activeSection === 'home'" (click)="scrollToSection('home')">Bienvenido</li>
-      <li [class.active]="activeSection === 'tools'" (click)="scrollToSection('tools')">Herramientas</li>
-      <li [class.active]="activeSection === 'education'" (click)="scrollToSection('education')">Educación</li>
-      <li [class.active]="activeSection === 'projects'" (click)="scrollToSection('projects')">Proyectos</li>
-      <li [class.active]="activeSection === 'contacts'" (click)="scrollToSection('contacts')">Contacto</li>
-      <button (click)="toggleTheme()">
-        <i class="fas {{theme}}"></i>
-      </button>
+      <li [class.active]="activeSection === 'home'" (click)="scrollToSection('home')"><span class="num">01.</span> Inicio</li>
+      <li [class.active]="activeSection === 'experience'" (click)="scrollToSection('experience')"><span class="num">02.</span> Experiencia</li>
+      <li [class.active]="activeSection === 'tools'" (click)="scrollToSection('tools')"><span class="num">03.</span> Skills</li>
+      <li [class.active]="activeSection === 'projects'" (click)="scrollToSection('projects')"><span class="num">04.</span> Proyectos</li>
+      <li [class.active]="activeSection === 'education'" (click)="scrollToSection('education')"><span class="num">05.</span> Formación</li>
+      <li [class.active]="activeSection === 'contacts'" (click)="scrollToSection('contacts')"><span class="num">06.</span> Contacto</li>
     </ul>
+    <a class="cv-btn" href="assets/docs/CV-LeonardoLópez.pdf" download target="_blank">
+      <i class="fas fa-file-arrow-down"></i> CV
+    </a>
   </nav>
-</div>
 
-
-
-
-
+  <div class="nav-actions">
+    <button class="theme-toggle" (click)="toggleTheme()" title="Cambiar tema">
+      <i class="fas {{theme}}"></i>
+    </button>
+    <button class="menu-toggle" (click)="toggleMenu()" title="Menú" [class.open]="isMenuOpen">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>

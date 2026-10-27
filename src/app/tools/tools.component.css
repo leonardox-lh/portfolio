@@ -1,77 +1,77 @@
-#tools{
-  padding-top: 120px;
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.3rem;
 }
-.tools{
-  width: 100%;
-  background: var(--backgroundColor);
-  text-align: center;
-  border-radius: 10px;
-  position: relative;
+
+.skill-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1.6rem;
+  transition: transform 0.3s var(--ease), border-color 0.3s var(--ease),
+    box-shadow 0.3s var(--ease);
+}
+.skill-card:hover {
+  transform: translateY(-5px);
+  border-color: var(--border-strong);
+  box-shadow: var(--shadow-md);
+}
+
+.skill-card-head {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+  margin-bottom: 1.3rem;
+}
+.skill-ico {
+  flex-shrink: 0;
+  width: 46px;
+  height: 46px;
+  display: grid;
+  place-items: center;
+  border-radius: 12px;
+  background: color-mix(in srgb, var(--accent) 15%, transparent);
+  color: var(--accent);
+  font-size: 1.15rem;
+}
+.skill-card-head h3 {
+  font-size: 1.15rem;
+  margin-bottom: 0.25rem;
+}
+.skill-card-head p {
+  font-size: 0.88rem;
+  line-height: 1.45;
+}
+
+.chips {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
-  flex-direction: row;
+  gap: 0.55rem;
 }
-.cont_tools{
-  width: 250px;
-  background-color: var(--backgroundColor);
-  border: 1px solid var(--mainColor);
-  border-radius: 10px;
-  margin: 15px 30px;
-  padding: 10px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-.cont_tools:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 8px 30px rgba(17,154,149,0.35), 0 0 0 1px var(--mainColor);
-}
-.title{
-  font-size: 25px;
-  color: var(--mainColor);
-  margin: 10px 0;
-}
-.description{
-  font-size: 15px;
-  color: var(--text-color);
-  margin: 10px 0;
-  font-family: var(--font-sans);
-}
-.icons {
-  display: flex;
-  justify-content: center;
+.chip {
+  display: inline-flex;
   align-items: center;
-  flex-wrap: wrap;
+  gap: 0.5rem;
+  padding: 0.45rem 0.85rem;
+  border-radius: 999px;
+  background: var(--surface-2);
+  border: 1px solid var(--border);
+  font-size: 0.86rem;
+  font-weight: 500;
+  color: var(--text);
+  transition: border-color 0.25s var(--ease), transform 0.25s var(--ease);
 }
-
-img{
-  width: 30px;
-  cursor: pointer;
-  filter: var(--layerColor);
-
+.chip:hover {
+  border-color: var(--accent);
+  transform: translateY(-2px);
 }
-img:hover{
-  filter: none;
+.chip img {
+  width: 18px;
+  height: 18px;
+  object-fit: contain;
 }
-
-.cont_icon:hover::after{
-  content: attr(title);
-  position: absolute;
-  bottom: 100%;
-  left: 50%;
-  transform: translateX(-50%);
-  color: var(--mainColor);
-  padding: 5px 10px;
-  border-radius: 5px;
-  white-space: nowrap;
-  font-size: 14px;
-  z-index: 1;
-  margin-bottom: 5px;
-  font-family: "Font Awesome 6 Brands";
+.chip i {
+  color: var(--accent);
+  font-size: 0.95rem;
 }
-.cont_icon{
-  color: var(--mainColor);
-  font-size: 30px;
-  padding: 13px;
-  cursor: pointer;
-}
-

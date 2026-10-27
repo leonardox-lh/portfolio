@@ -1,106 +1,64 @@
-/* ── Splash Screen ── */
+.content_body {
+  display: block;
+}
+
+/* ---------------- Splash ---------------- */
 .splash {
   position: fixed;
   inset: 0;
   z-index: 9999;
-  background-color: var(--backgroundColor, rgb(10, 25, 47));
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
-  gap: 40px;
-  transition: opacity 0.7s ease, transform 0.7s ease;
+  justify-content: center;
+  gap: 1.8rem;
+  background: var(--bg);
+  transition: opacity 0.6s ease, visibility 0.6s ease;
 }
-
 .splash-out {
   opacity: 0;
-  transform: scale(1.05);
-  pointer-events: none;
+  visibility: hidden;
 }
 
 .splash-logo {
-  font-family: 'Chau Philomene One', sans-serif;
-  font-size: clamp(2.5rem, 8vw, 5rem);
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 7vw, 3.4rem);
+  font-weight: 700;
+  letter-spacing: -0.03em;
   display: flex;
-  align-items: center;
-  gap: 0.1em;
-  animation: splashPop 0.6s cubic-bezier(0.34, 1.56, 0.64, 1) both;
+  gap: 0.15em;
 }
-
 .splash-bracket {
-  color: var(--mainColor, rgb(17, 154, 149));
-  display: inline-block;
-  animation: splashBracket 0.5s ease both;
+  background: var(--accent-grad);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
-.splash-bracket:first-child { animation-delay: 0.1s; }
-.splash-bracket:last-child  { animation-delay: 0.3s; }
-
 .splash-name {
-  color: #f8f8f2;
-  animation: splashName 0.5s ease 0.15s both;
-  letter-spacing: 0.05em;
+  color: var(--text);
+  opacity: 0;
+  animation: splashName 0.8s var(--ease) forwards 0.2s;
 }
-
-/* glow pulse while waiting */
-.splash-logo {
-  animation: splashPop 0.6s cubic-bezier(0.34, 1.56, 0.64, 1) both,
-             splashGlow 1s ease 0.7s infinite alternate;
-}
-
-@keyframes splashPop {
-  from { opacity: 0; transform: scale(0.6); }
-  to   { opacity: 1; transform: scale(1); }
-}
-
-@keyframes splashBracket {
-  from { opacity: 0; transform: translateX(-20px); }
-  to   { opacity: 1; transform: translateX(0); }
-}
-
 @keyframes splashName {
-  from { opacity: 0; transform: translateY(10px); }
-  to   { opacity: 1; transform: translateY(0); }
+  from { opacity: 0; transform: translateY(12px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 
-@keyframes splashGlow {
-  from { filter: drop-shadow(0 0 6px rgba(17,154,149,0.4)); }
-  to   { filter: drop-shadow(0 0 20px rgba(17,154,149,0.9)); }
-}
-
-/* Progress bar */
 .splash-bar {
-  width: min(260px, 60vw);
+  width: 220px;
   height: 3px;
-  background: rgba(17,154,149,0.2);
   border-radius: 99px;
+  background: var(--border);
   overflow: hidden;
 }
-
 .splash-progress {
   height: 100%;
-  background: linear-gradient(90deg, var(--mainColor, rgb(17,154,149)), #5effd8);
+  width: 0;
   border-radius: 99px;
-  animation: splashLoad 1.9s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+  background: var(--accent-grad);
+  animation: splashLoad 2s var(--ease) forwards;
 }
-
 @keyframes splashLoad {
-  0%   { width: 0%; }
-  30%  { width: 40%; }
-  70%  { width: 70%; }
-  100% { width: 100%; }
+  from { width: 0; }
+  to { width: 100%; }
 }
-
-.content_body{
-  width: 80%;
-  max-width: 1000px;
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-}
-@media screen and (max-width: 1020px){
-  .content_body {
-    margin: 0 auto;
-    width: 100%;
-  }
-}
-

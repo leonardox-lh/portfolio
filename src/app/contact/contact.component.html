@@ -1,35 +1,39 @@
-<section id="contacts">
-  <app-title [title]="title" scrollReveal></app-title>
-  <div class="contact-card" scrollReveal [revealDelay]="150">
-    <div class="contact-item">
-      <div class="icon">
-        <i class="fas fa-phone-alt"></i>
-      </div>
-      <div class="info">
-        <h4>Mi Número</h4>
-        <p>+51 981666866</p>
-      </div>
-    </div>
+<section class="section-pad" id="contacts">
+  <div class="container">
+    <div class="contact-panel" scrollReveal>
+      <div class="contact-left">
+        <span class="section-kicker"><span>06.</span> Contacto</span>
+        <h2 class="section-title">¿Construimos algo <span class="accent-text">juntos?</span></h2>
+        <p class="section-sub">
+          Estoy abierto a nuevas oportunidades y colaboraciones. Si tienes un proyecto en mente
+          o buscas sumar a tu equipo, escríbeme — respondo rápido.
+        </p>
 
-    <div class="contact-item">
-      <div class="icon">
-        <i class="fas fa-envelope"></i>
-      </div>
-      <div class="info">
-        <h4>Email Address</h4>
-        <p>leonardohuarcaya27@gmail.com</p>
-      </div>
-    </div>
+        <a href="mailto:leonardohuarcaya27@gmail.com" class="btn btn-primary contact-mail">
+          <i class="fas fa-paper-plane"></i> Enviar un correo
+        </a>
 
-    <div class="contact-item">
-      <div class="icon">
-        <i class="fas fa-map-marker-alt"></i>
+        <div class="contact-social">
+          <a href="https://github.com/leonardox-lh" target="_blank" rel="noopener" title="GitHub"><i class="fab fa-github"></i></a>
+          <a href="https://www.linkedin.com/in/leonardo-lópez-huarcaya-820a17307" target="_blank" rel="noopener" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+          <a href="https://api.whatsapp.com/send?phone=51981666866" target="_blank" rel="noopener" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+        </div>
       </div>
-      <div class="info">
-        <h4>Dirección</h4>
-        <p>Lima - Perú</p>
+
+      <div class="contact-right">
+        <a class="contact-item" href="tel:+51981666866">
+          <span class="ci-icon"><i class="fas fa-phone"></i></span>
+          <span class="ci-text"><small>Teléfono</small>+51 981 666 866</span>
+        </a>
+        <a class="contact-item" href="mailto:leonardohuarcaya27@gmail.com">
+          <span class="ci-icon"><i class="fas fa-envelope"></i></span>
+          <span class="ci-text"><small>Email</small>leonardohuarcaya27@gmail.com</span>
+        </a>
+        <div class="contact-item static">
+          <span class="ci-icon"><i class="fas fa-location-dot"></i></span>
+          <span class="ci-text"><small>Ubicación</small>Lima, Perú</span>
+        </div>
       </div>
     </div>
   </div>
-
 </section>

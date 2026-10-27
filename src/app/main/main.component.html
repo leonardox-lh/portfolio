@@ -1,25 +1,73 @@
-<section class="cont_main" @enterState id="home">
-  <div class="main_img">
-    <img src="../../assets/img/foto.png">
+<section class="hero" id="home">
+  <div class="hero-grid container">
+
+    <div class="hero-text" @enterState>
+      <p class="eyebrow"><span class="dot"></span> Disponible para nuevos retos</p>
+      <h1 class="hero-title">
+        Hola, soy <span class="accent-text">Leonardo López</span>
+      </h1>
+      <div class="hero-role">
+        <span class="role-prefix">&lt;/&gt;</span>
+        {{ displayedText }}<span class="cursor" [class.blink]="showCursor">|</span>
+      </div>
+      <p class="hero-desc">
+        Desarrollador <strong>Full Stack</strong> con <strong>+2 años</strong> construyendo sistemas en
+        producción — desde la base de datos y las APIs REST hasta dashboards y la experiencia de
+        usuario. Trabajo de punta a punta con <strong>Vue 3</strong>, <strong>React</strong>,
+        <strong>Laravel</strong> y <strong>Spring Boot</strong> bajo metodología Scrum.
+      </p>
+
+      <div class="hero-cta">
+        <a href="#projects" class="btn btn-primary" (click)="scrollTo('projects', $event)">
+          Ver proyectos <i class="fas fa-arrow-right"></i>
+        </a>
+        <a href="assets/docs/CV-LeonardoLópez.pdf" download target="_blank" class="btn btn-ghost">
+          <i class="fas fa-file-arrow-down"></i> Descargar CV
+        </a>
+      </div>
+
+      <div class="hero-stats">
+        <div class="stat">
+          <span class="stat-num">+2</span>
+          <span class="stat-label">Años de<br>experiencia</span>
+        </div>
+        <div class="stat">
+          <span class="stat-num">650+</span>
+          <span class="stat-label">Usuarios en<br>producción</span>
+        </div>
+        <div class="stat">
+          <span class="stat-num">40+</span>
+          <span class="stat-label">Módulos<br>desarrollados</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero-visual" @enterState>
+      <div class="code-wrap">
+        <div class="code-glow"></div>
+        <div class="code-card">
+          <div class="code-bar">
+            <span class="cdot red"></span><span class="cdot yellow"></span><span class="cdot green"></span>
+            <span class="code-file">leonardo.ts</span>
+          </div>
+          <div class="code-body">
+            <div class="cl"><span class="c-com">// Desarrollador Full Stack</span></div>
+            <div class="cl"><span class="c-kw">const</span>&nbsp;<span class="c-var">leonardo</span>&nbsp;= &#123;</div>
+            <div class="cl">&nbsp;&nbsp;role: <span class="c-str">"Full Stack Developer"</span>,</div>
+            <div class="cl">&nbsp;&nbsp;experience: <span class="c-str">"2+ años"</span>,</div>
+            <div class="cl">&nbsp;&nbsp;stack: [<span class="c-str">"Vue"</span>, <span class="c-str">"React"</span>, <span class="c-str">"Laravel"</span>],</div>
+            <div class="cl">&nbsp;&nbsp;shipped: &#123; users: <span class="c-num">650</span>, modules: <span class="c-num">40</span> &#125;,</div>
+            <div class="cl">&nbsp;&nbsp;available: <span class="c-bool">true</span></div>
+            <div class="cl">&#125;;</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
   </div>
-  <div class="cont_text">
-    <h1>Bienvenido, soy</h1>
-    <div class="sub_title name">Leonardo López</div>
-    <div class="sub_title typewriter">
-      {{ displayedText }}<span class="cursor" [class.blink]="showCursor">|</span>
-    </div>
-    <div class="text">
-      Desarrollo aplicaciones web modernas, escalables y centradas en el usuario.
-      Combino experiencia en frontend y backend para crear soluciones eficientes,
-      intuitivas y de alto impacto. Apasionado por la innovación, la optimización de procesos
-      y el aprendizaje autónomo constante.
-    </div>
-    <div class="cont_btn">
-      <button> Available to work </button>
-      <a href="../../assets/docs/CV-LeonardoLópez.pdf" download="CV-LeonardoLópez.pdf" target="_blank"><i class="fas fa-file-alt"></i></a>
-    </div>
-  </div>
+
+  <a href="#experience" class="scroll-hint" (click)="scrollTo('experience', $event)">
+    <span>Desplázate</span>
+    <i class="fas fa-chevron-down"></i>
+  </a>
 </section>
-
-
-

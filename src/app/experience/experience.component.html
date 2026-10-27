@@ -1,0 +1,40 @@
+<section class="section-pad" id="experience">
+  <div class="container">
+    <div class="section-head" scrollReveal>
+      <span class="section-kicker"><span>02.</span> Trayectoria</span>
+      <h2 class="section-title">Experiencia <span class="accent-text">profesional</span></h2>
+      <p class="section-sub">Sistemas reales en producción, de la base de datos a la interfaz.</p>
+    </div>
+
+    <div class="timeline">
+      <div class="job" *ngFor="let job of jobs; let i = index" scrollReveal [revealDelay]="i * 120">
+        <div class="job-marker">
+          <span class="node"></span>
+        </div>
+
+        <div class="job-card">
+          <div class="job-top">
+            <div>
+              <h3 class="job-role">{{ job.role }}</h3>
+              <p class="job-company">{{ job.company }}</p>
+            </div>
+            <span class="job-type" [class.current]="job.current">{{ job.type }}</span>
+          </div>
+
+          <p class="job-date"><i class="far fa-calendar"></i> {{ job.date }}</p>
+          <p class="job-summary">{{ job.summary }}</p>
+
+          <ul class="job-highlights">
+            <li *ngFor="let h of job.highlights">
+              <i class="fas fa-angle-right"></i><span>{{ h }}</span>
+            </li>
+          </ul>
+
+          <div class="job-stack">
+            <span *ngFor="let s of job.stack">{{ s }}</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

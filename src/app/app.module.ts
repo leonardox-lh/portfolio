@@ -16,6 +16,7 @@ import {MatDialogModule } from '@angular/material/dialog';
 import { ModalComponent } from './modal/modal.component';
 import { ContactComponent } from './contact/contact.component';
 import { ScrollRevealDirective } from './scroll-reveal.directive';
+import { ExperienceComponent } from './experience/experience.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { ScrollRevealDirective } from './scroll-reveal.directive';
     FooterComponent,
     ModalComponent,
     ContactComponent,
-    ScrollRevealDirective
+    ScrollRevealDirective,
+    ExperienceComponent
   ],
   imports: [
     BrowserAnimationsModule,

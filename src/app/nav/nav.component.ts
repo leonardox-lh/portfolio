@@ -1,6 +1,6 @@
-import {Component, HostListener} from '@angular/core';
-import {animate, state, style, transition, trigger} from "@angular/animations";
-import {ThemeService} from "../service/theme.service";
+import { Component, HostListener } from '@angular/core';
+import { animate, state, style, transition, trigger } from "@angular/animations";
+import { ThemeService } from "../service/theme.service";
 
 @Component({
   selector: 'app-nav',
@@ -8,15 +8,9 @@ import {ThemeService} from "../service/theme.service";
   styleUrls: ['./nav.component.css'],
   animations: [
     trigger('enterState', [
-      state('void', style({
-        transform: 'translateY(-100%)',
-        opacity: 0
-      })),
-      transition(':enter',[
-        animate(800,style({
-          transform: 'translateY(0)',
-          opacity: 1
-        }))
+      state('void', style({ transform: 'translateY(-100%)', opacity: 0 })),
+      transition(':enter', [
+        animate(700, style({ transform: 'translateY(0)', opacity: 1 }))
       ]),
     ]),
   ],
@@ -24,27 +18,35 @@ import {ThemeService} from "../service/theme.service";
 export class NavComponent {
   private lastScrollTop = 0;
   isHidden = false;
-  isMenuOpen: boolean;
+  scrolled = false;
+  isMenuOpen = false;
   theme: string;
   activeSection = 'home';
 
   constructor(private themeService: ThemeService) {
-    this.isMenuOpen = false;
     this.theme = this.iconTheme();
   }
-  toggleMenu(){
+
+  toggleMenu() {
     this.isMenuOpen = !this.isMenuOpen;
   }
 
   @HostListener('window:scroll', [])
   onWindowScroll() {
     const currentScroll = window.pageYOffset || document.documentElement.scrollTop;
-    if (currentScroll > this.lastScrollTop) {
-      this.isHidden = true;
-    } else {
-      this.isHidden = false;
-    }
+    this.scrolled = currentScroll > 30;
+    // Hide on scroll down, show on scroll up (never hide near the top)
+    this.isHidden = currentScroll > this.lastScrollTop && currentScroll > 160 && !this.isMenuOpen;
     this.lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
+
+    // Active section highlight
+    const sections = document.querySelectorAll('section');
+    sections.forEach((section: any) => {
+      const rect = section.getBoundingClientRect();
+      if (rect.top <= 120 && rect.bottom >= 120) {
+        this.activeSection = section.id;
+      }
+    });
   }
 
   toggleTheme() {
@@ -57,29 +59,12 @@ export class NavComponent {
   }
 
   scrollToSection(sectionId: string) {
+    this.isMenuOpen = false;
     const element = document.getElementById(sectionId);
-    let offset;
     if (element) {
-      const topPosition = element.getBoundingClientRect().top + window.pageYOffset;
-      window.scrollTo({top: topPosition, behavior: 'smooth'});
-      setTimeout(() => {
-        this.activeSection = sectionId;
-      }, 1000);
-    }
-  }
-  @HostListener('window:scroll', [])
-  onScroll(): void {
-    const sections = document.querySelectorAll('section');
-    let active = null;
-
-    sections.forEach((section: any) => {
-      const rect = section.getBoundingClientRect();
-      if (rect.top <= 10 && rect.bottom >= 0) {
-        this.activeSection = section.id;
-      }
-    });
-    if (active && this.activeSection !== active) {
-      this.activeSection = active;
+      const topPosition = element.getBoundingClientRect().top + window.pageYOffset - 70;
+      window.scrollTo({ top: topPosition, behavior: 'smooth' });
+      this.activeSection = sectionId;
     }
   }
 }

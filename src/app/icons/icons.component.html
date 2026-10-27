@@ -1,22 +1,11 @@
-<div class="socialMedia" >
-  <div class="cont_email" @enterState>
-    <h2 class="email">leonardohuarcaya27@gmail.com</h2>
-  </div>
-  <div class="cont_a" @enterState>
-    <a href="https://github.com/leonardox-lh" target="_blank" ><i class="fab fab fa-github"></i></a>
-    <a href="www.linkedin.com/in/leonardo-lópez-huarcaya-820a17307" target="_blank" ><i class="fab fa-linkedin"></i></a>
-    <a href="https://api.whatsapp.com/send?phone=51981666866" target="_blank" ><i class="fab fa-whatsapp"></i></a>
-  </div>
-
+<div class="social-rail left" @enterState>
+  <a href="https://github.com/leonardox-lh" target="_blank" rel="noopener" title="GitHub"><i class="fab fa-github"></i></a>
+  <a href="https://www.linkedin.com/in/leonardo-lópez-huarcaya-820a17307" target="_blank" rel="noopener" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+  <a href="https://api.whatsapp.com/send?phone=51981666866" target="_blank" rel="noopener" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+  <span class="rail-line"></span>
 </div>
 
-<!--<div class="menu-container" @enterState2>
-  <button class="main-button" (click)="toggleMenu()">ES</button>
-
-  <button class="option-button" [ngClass]="{'open': isOpen}" style="&#45;&#45;angle: 140deg;">
-    <span title="Español">ES</span>
-  </button>
-  <button class="option-button" [ngClass]="{'open': isOpen}" style="&#45;&#45;angle: 220deg;">
-    <span title="Español">EN</span>
-  </button>
-</div>-->
+<div class="social-rail right" @enterState2>
+  <a href="mailto:leonardohuarcaya27@gmail.com" class="rail-email">leonardohuarcaya27@gmail.com</a>
+  <span class="rail-line"></span>
+</div>
